@@ -1,8 +1,21 @@
 # Changelog
 
-## v1.3.0 (???)
-**Improvements:**
- - Added new ways to search through saved beatmaps
+## v1.2.4 (30/12/2020)
+**Bug fixes**:
+ - Do not remove the playlist thumbnail when adding songs. (#80, #82)
+
+This is the final version of beatlist, and the repo will be archived. See README.MD for more information.
+
+## v1.2.3 (18/12/2020)
+**Features:**
+ - Handling rate limit (#77)
+ - Added a mirror of beatsaver, BeatSaberPlus, available in options (#79)
+
+**Improvement:**
+ - If you had a lot of playlist, beatlist could be slow. It should now handle better. (#75)
+
+**Bug fixes**:
+ - Download should now work again (#78)
 
 ## v1.2.2 (02/09/2020)
 **Improvement:**

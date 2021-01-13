@@ -50,6 +50,10 @@ export default class PlaylistLoader {
     const noPathError = new Error("this playlist doesn't contain a path");
     if (playlist.path === undefined) throw noPathError;
 
+    if (playlist.cover === null) {
+      playlist.cover = await PlaylistLoader.LoadCover(playlist.path);
+    }
+
     format = format ?? playlist.format;
     await this.SaveAt(playlist.path, playlist, format);
 
@@ -87,6 +91,10 @@ export default class PlaylistLoader {
     }
 
     await serializer.serialize(playlist);
+  }
+
+  public static LoadCover(playlistPath: string): Promise<Buffer | null> {
+    return this.GetPlaylistBase(playlistPath).then((p) => p.cover);
   }
 
   private static async GetPlaylistBase(
