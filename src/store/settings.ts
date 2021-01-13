@@ -1,6 +1,6 @@
 import { make } from "vuex-pathify";
 import PlaylistFormatType from "@/libraries/playlist/PlaylistFormatType";
-import { ColorMode } from "@/libraries/app/ColorMode";
+import BeatsaverServerUrl from "@/libraries/net/beatsaver/BeatsaverServerUrl";
 
 export interface SettingsStoreState {
   appVersion: string | undefined;
@@ -23,6 +23,7 @@ export interface SettingsStoreState {
     showLetterInDifficulty: boolean;
     colorMode: ColorMode;
   };
+  beatsaverServerUrl: BeatsaverServerUrl;
 }
 
 export interface BeatmapTableStoreState {
@@ -57,6 +58,7 @@ const state = {
     showLetterInDifficulty: false,
     colorMode: ColorMode.None,
   },
+  beatsaverServerUrl: BeatsaverServerUrl.Beatsaver,
 };
 
 const mutations = {
