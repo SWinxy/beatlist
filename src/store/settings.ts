@@ -1,4 +1,5 @@
 import { make } from "vuex-pathify";
+import { ColorMode } from "@/libraries/app/ColorMode";
 import PlaylistFormatType from "@/libraries/playlist/PlaylistFormatType";
 import BeatsaverServerUrl from "@/libraries/net/beatsaver/BeatsaverServerUrl";
 
