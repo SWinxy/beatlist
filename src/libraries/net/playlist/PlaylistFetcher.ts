@@ -33,7 +33,7 @@ export default class PlaylistFetcher {
   }
 
   private static async download(url: string, writeStream: stream.Writable) {
-    const response = await fetch(url);
+    const response: any = await fetch(url);
 
     if (!response.ok)
       throw new Error(`unexpected response ${response.statusText}`);

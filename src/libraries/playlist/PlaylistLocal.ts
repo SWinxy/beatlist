@@ -20,7 +20,7 @@ export interface PlaylistLocal extends PlaylistBase {
 
 export interface PlaylistMap {
   hash: string | undefined;
-  dateAdded: Date;
+  dateAdded?: Date;
 }
 
 export interface PlaylistValidMap extends PlaylistMap {
